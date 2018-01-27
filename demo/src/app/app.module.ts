@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { PaymentCoreModule } from 'ngx-payment/core';
 import { StripeCheckoutPaymentProvider } from 'ngx-payment/stripe';
+import { OgoneCheckoutPaymentProvider } from 'ngx-payment/ogone';
 
 
 import { AppComponent } from './app.component';
@@ -14,7 +15,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     PaymentCoreModule.forRoot({
-      paymentService: StripeCheckoutPaymentProvider
+      paymentService: OgoneCheckoutPaymentProvider
     })
   ],
   providers: [],
