@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { PaymentCoreModule } from 'ngx-payment/core';
+import { StripeCheckoutPaymentProvider } from 'ngx-payment/stripe';
 
 
 import { AppComponent } from './app.component';
@@ -10,7 +12,10 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    PaymentCoreModule.forRoot({
+      paymentService: StripeCheckoutPaymentProvider
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
